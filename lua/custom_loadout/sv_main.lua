@@ -93,6 +93,8 @@ function CLoadout:GiveWeapons( ply )
     if preferredWeapon then
         ply:SelectWeapon( preferredWeapon )
     end
+
+    hook.Run( "CLoadoutPostGiveWeapons", ply, items, preferredWeapon )
 end
 
 function CLoadout:Apply( ply )
