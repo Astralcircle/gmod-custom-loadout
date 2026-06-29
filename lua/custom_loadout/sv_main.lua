@@ -44,7 +44,7 @@ function CLoadout:GiveWeapons( ply )
     local maxPrimary = GetConVar( "custom_loadout_primary_limit" ):GetInt()
     local maxSecondary = GetConVar( "custom_loadout_secondary_limit" ):GetInt()
     hook.Run( "CLoadoutPreGiveWeapons", ply, items )
-    
+
     local preferredWeapon = ply:GetInfo( "cl_defaultweapon" )
     local weapons = list.Get( "Weapon" )
 
